@@ -1,0 +1,11 @@
+Package: SinIW
+Type: Package
+Title: The SinIW Distribution
+Version: 0.1
+Date: 2015-11-07
+Author: Luciano Serafim [aut, cre]
+Maintainer: Luciano Serafim de Souza <lucianoserafimdesouza@gmail.com>
+Description: Density, distribution function, quantile function, random generation and survival function.
+License: GPL (>= 2)
+LazyData: TRUE
+RoxygenNote: 5.0.0.9000
