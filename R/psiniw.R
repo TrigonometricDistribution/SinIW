@@ -10,10 +10,20 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-psiniw <- function(q,alpha,theta,lower = T,log.p = FALSE){
-  if (lower == T){
-    sin((pi/2)*exp(-alpha*q^(-theta)))
-  }else{
-    (1 - sin((pi/2)*exp(-alpha*q^(-theta))))
+psiniw <- function(q,alpha,theta,lower = TRUE,log.p = FALSE){
+
+  if (log.p == TRUE) {
+    if (lower == TRUE){
+      log(sin((pi/2)*exp(-alpha*q^(-theta))))
+    }else{
+      log((1 - sin((pi/2)*exp(-alpha*q^(-theta)))))
+    }
+  } else {
+    if (lower == TRUE){
+      sin((pi/2)*exp(-alpha*q^(-theta)))
+    }else{
+      (1 - sin((pi/2)*exp(-alpha*q^(-theta))))
+    }
   }
+
 }

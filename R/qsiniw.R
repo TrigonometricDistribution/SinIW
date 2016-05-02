@@ -10,12 +10,22 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-qsiniw<-function(p,alpha,theta,lower = T,log.p = FALSE){
+qsiniw<-function(p,alpha,theta,lower = TRUE,log.p = FALSE){
   library(stats)
   library(pracma)
-  if (lower == T){
-    (-log((2/pi)*asin(p))/alpha)^(-1/theta)
-  }else{
-    (-log((2/pi)*asin(1-p))/alpha)^(-1/theta)
+
+  if (log.p == TRUE) {
+    if (lower == TRUE){
+      log((-log((2/pi)*asin(p))/alpha)^(-1/theta))
+    }else{
+      log((-log((2/pi)*asin(1-p))/alpha)^(-1/theta))
+    }
+  } else {
+    if (lower == TRUE){
+      (-log((2/pi)*asin(p))/alpha)^(-1/theta)
+    }else{
+      (-log((2/pi)*asin(1-p))/alpha)^(-1/theta)
+    }
   }
+
 }
