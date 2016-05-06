@@ -42,3 +42,14 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .Rproj.user
+
+# =========================
+# By Lucas
+# =========================
+
+# Files I don't wanna share
+# =========================
+Rplot_Lucas.eps
+R/tests.R
+.RData
+.Rhistory

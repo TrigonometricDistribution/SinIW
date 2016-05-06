@@ -1,29 +1,31 @@
-# rsiniw
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+#' Generates random deviates from a SinInverseWeibull probability distribution.
+#'
+#' @param n Number of observations to be generated.
+#' @param alpha Alpha parameter.
+#' @param theta Theta parameter.
+#' @return A vector with n observations of the SinInverseWeibull distribution.
+#' @examples
+#' rsiniw(1, 1, 1)
+#' rsiniw(1, 10, 0.1)
 
-rsiniw<-function(n,alpha,theta){
-	library(stats)
+rsiniw <- function(n,alpha,theta){
+  library(stats)
   library(pracma)
-	y=asin(0.999999999)
-	limsup = (-log((2/pi)*y)/alpha)^(-1/theta)
-	accept = c()
-	count = 0
-	while (length(accept) < n){
-	  U = runif(1,0,limsup)
-	  x = runif(1,0,limsup)
-	  if(dunif(x, 0, limsup)*U <= dsiniw(x,alpha,theta)) {
-	    accept[count] = x
-	    count = count + 1
-	  }
-	}
-	return(accept)
+  library(fdrtool)
+
+  accept <- c()
+  count <- 0
+  while (length(accept) < n){
+
+    U <- rhalfnorm(1)
+    x <- rhalfnorm(1)
+
+    # A note:
+    # maxHalfNormal <- sqrt(2)/sqrt(pi)
+    if(U <= dsiniw(x, alpha, theta)/(sqrt(pi)*dhalfnorm(x)/sqrt(2))) {
+      accept[count] <- x
+      count <- count + 1
+    }
+  }
+  return(accept)
 }
