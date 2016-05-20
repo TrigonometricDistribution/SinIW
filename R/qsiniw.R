@@ -1,14 +1,14 @@
-# qsiniw
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+#' Generates a vector of probabilities from a SinInverseWeibull probability distribution.
+#'
+#' @param p vector of probabilities.
+#' @param alpha Alpha parameter.
+#' @param theta Theta parameter.
+#' @param lower Lower parameter.
+#' @param log.p Log.p parameter.
+#' @return A vector with n observations of the SinInverseWeibull distribution.
+#' @examples
+#' qsiniw(p, 1, 1,lower = TRUE,log.p = FALSE)
+#' qsiniw(p, 1, 0.1,lower = TRUE,log.p = FALSE)
 
 qsiniw<-function(p,alpha,theta,lower = TRUE,log.p = FALSE){
   library(stats)

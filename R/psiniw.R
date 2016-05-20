@@ -1,14 +1,14 @@
-# psiniw
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+#' Generates a vector of cumulative from a SinInverseWeibull probability distribution.
+#'
+#' @param q vector of quantiles.
+#' @param alpha Alpha parameter.
+#' @param theta Theta parameter.
+#' @param lower Lower parameter.
+#' @param log.p Log.p parameter.
+#' @return A vector with n observations of the SinInverseWeibull distribution.
+#' @examples
+#' psiniw(q, 1, 1,lower = TRUE,log.p = FALSE)
+#' psiniw(q, 0.5, 0.7,lower = TRUE,log.p = FALSE)
 
 psiniw <- function(q,alpha,theta,lower = TRUE,log.p = FALSE){
 
