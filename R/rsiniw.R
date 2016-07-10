@@ -5,8 +5,8 @@
 #' @param theta Theta parameter.
 #' @return A vector with n observations of the SinInverseWeibull distribution.
 #' @examples
-#' rsiniw(1, 1, 1)
-#' rsiniw(1, 0.5, 0.7)
+#' rsiniw(1000,0.1,0.9)
+#' rsiniw(1000,0.2,0.8)
 
 rsiniw <- function(n,alpha,theta){
   library(stats)

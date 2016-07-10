@@ -1,4 +1,4 @@
-#' Generates a vector of cumulative from a SinInverseWeibull probability distribution.
+#' The cumulative function of the SinInverseWeibull probability distribution.
 #'
 #' @param q vector of quantiles.
 #' @param alpha Alpha parameter.
@@ -7,8 +7,8 @@
 #' @param log.p Log.p parameter.
 #' @return A vector with n observations of the SinInverseWeibull distribution.
 #' @examples
-#' psiniw(q, 1, 1,lower = TRUE,log.p = FALSE)
-#' psiniw(q, 0.5, 0.7,lower = TRUE,log.p = FALSE)
+#' psiniw(q,1,1,TRUE,FALSE)
+#' psiniw(q,0.5,0.7,TRUE,FALSE)
 
 psiniw <- function(q,alpha,theta,lower = TRUE,log.p = FALSE){
 

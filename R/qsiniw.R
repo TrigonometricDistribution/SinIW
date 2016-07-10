@@ -1,4 +1,4 @@
-#' Generates a vector of probabilities from a SinInverseWeibull probability distribution.
+#' Te quantile function of the SinInverseWeibull probability distribution.
 #'
 #' @param p vector of probabilities.
 #' @param alpha Alpha parameter.
@@ -7,8 +7,8 @@
 #' @param log.p Log.p parameter.
 #' @return A vector with n observations of the SinInverseWeibull distribution.
 #' @examples
-#' qsiniw(p, 1, 1,lower = TRUE,log.p = FALSE)
-#' qsiniw(p, 1, 0.1,lower = TRUE,log.p = FALSE)
+#' qsiniw(p,1,1,TRUE,FALSE)
+#' qsiniw(p,1,0.1,TRUE,FALSE)
 
 qsiniw<-function(p,alpha,theta,lower = TRUE,log.p = FALSE){
   library(stats)
