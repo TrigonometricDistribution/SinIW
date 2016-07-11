@@ -3,14 +3,12 @@ Type: Package
 Title: The SinIW Distribution
 Version: 0.1
 Date: 2015-11-07
-Authors@R: c(person("Luciano", "Souza", role = "aut",
-                    email = "lcnsza@gmail.com"),
+Authors@R: c(person("Luciano", "Souza", role = "aut", email = "lcnsza@gmail.com"),
              person("Lucas", "Gallindo", role = "aut", email = "lgallindo@gmail.com"),
-             person("Luciano", "Serafim", role = c("aut", "cre"),
-                    email = "lucianoserafimdesouza@gmail.com"))
+             person("Luciano", "Serafim", role = c("aut", "cre"), email = "lucianoserafimdesouza@gmail.com"))
 Author: Luciano Serafim [aut, cre]
 Maintainer: Luciano Serafim de Souza <lucianoserafimdesouza@gmail.com>
 Description: Density, distribution function, quantile function, random generation and survival function.
 License: GPL (>= 2)
+Depends: R (>= 3.0.1), pracma, stats, fdrtool
 LazyData: TRUE
-RoxygenNote: 5.0.0.9000
