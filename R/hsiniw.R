@@ -1,4 +1,5 @@
 #' The hazard rate function of the SinInverseWeibull probability distribution.
+#' @export
 #'
 #' @param x vector of quantiles.
 #' @param alpha Alpha parameter.

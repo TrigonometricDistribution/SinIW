@@ -35,7 +35,7 @@ ssiniw(x, alpha, theta)
   logical; if TRUE, probabilities p are given as log(p).
   }
   \item{lower}{
-  logical; if TRUE (default), probabilities are P[X ≤ x], otherwise, P[X > x].
+  logical; if TRUE (default), probabilities are \eqn{P[X \leq x]}, otherwise, \eqn{P[X > x]}.
   }
 }
 \details{
@@ -64,3 +64,4 @@ The \href{http://artax.karlin.mff.cuni.cz/r-help/library/actuar/html/InverseWeib
 x = rsiniw(1000,0.2,0.9)
 hist(x,probability = TRUE,border = 0,ylim = c(0,1),xlim = c(0,5),main = "",ylab = "Density",lty = 2,lwd=2)
 curve(dsiniw(x,0.2,0.9),add = T,lty=2,lwd=2,col=1)
+}

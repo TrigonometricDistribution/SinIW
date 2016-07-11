@@ -1,4 +1,5 @@
 #' Generates random deviates from a SinInverseWeibull probability distribution.
+#' @export
 #'
 #' @param n Number of observations to be generated.
 #' @param alpha Alpha parameter.
@@ -17,10 +18,10 @@ rsiniw <- function(n,alpha,theta){
   count <- 0
   while (length(accept) < n){
 
-    U <- rhalfnorm(1)
-    x <- rhalfnorm(1)
+    U <- fdrtool::rhalfnorm(1)
+    x <- fdrtool::rhalfnorm(1)
 
-    if(U <= dsiniw(x, alpha, theta)/(sqrt(pi)*dhalfnorm(x)/sqrt(2))) {
+    if(U <= dsiniw(x, alpha, theta)/(sqrt(pi)*fdrtool::dhalfnorm(x)/sqrt(2))) {
       accept[count] <- x
       count <- count + 1
     }

@@ -1,4 +1,5 @@
 #' Te quantile function of the SinInverseWeibull probability distribution.
+#' @export
 #'
 #' @param p vector of probabilities.
 #' @param alpha Alpha parameter.
