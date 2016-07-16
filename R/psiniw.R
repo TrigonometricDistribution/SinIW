@@ -8,8 +8,8 @@
 #' @param log.p Log.p parameter.
 #' @return A vector with n observations of the SinInverseWeibull distribution.
 #' @examples
-#' psiniw(q,1,1,TRUE,FALSE)
-#' psiniw(q,0.5,0.7,TRUE,FALSE)
+#' psiniw(0.5,1,1,TRUE,FALSE)
+#' psiniw(0.5,0.5,0.7,TRUE,FALSE)
 
 psiniw <- function(q,alpha,theta,lower = TRUE,log.p = FALSE){
 

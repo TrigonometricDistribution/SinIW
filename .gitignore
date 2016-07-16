@@ -1,55 +1,23 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# History files
+.Rhistory
+.Rapp.history
 
-# Folder config file
-Desktop.ini
+# Session Data files
+.RData
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Example code in package build process
+*-Ex.R
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# RStudio files
+.Rproj.user/
 
-# Windows shortcuts
-*.lnk
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
 
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
 .Rproj.user
 
-# =========================
 # By Lucas
-# =========================
-
-# Files I don't wanna share
-# =========================
-Rplot_Lucas.eps
-R/tests.R
-.RData
-.Rhistory
+expurgo/
